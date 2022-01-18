@@ -7,4 +7,5 @@ export default {
   primary: "#088a65",
   primaryColor: "#088a65",
   accentColor: "orange",
+  Blueee: "#0300c9",
 };
