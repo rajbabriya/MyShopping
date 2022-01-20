@@ -18,9 +18,9 @@ const defaultNavOptions = {
   headerTitle: "Products",
   // headerBackground: Platform.OS === "android" ? "blue" : "white",
   headerStyle: {
-    backgroundColor: Platform.OS === "android" ? Colors.Blueee : "white",
+    backgroundColor: Platform.OS === "android" ? Colors.primary : "white",
   },
-  headerTintColor: Platform.OS === "android" ? "white" : "blue",
+  headerTintColor: Platform.OS === "android" ? "white" : Colors.primary,
 };
 
 const ProductsNavigator = createStackNavigator(
