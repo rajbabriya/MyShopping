@@ -5,6 +5,7 @@ import { Provider } from "react-redux";
 import productReducer from "./store/reducers/Product";
 import cartReducer from "./store/reducers/cart";
 import orderReducer from "./store/reducers/orders";
+import authReducer from "./store/reducers/auth";
 import ShopNavigator from "./navigation/ShopNavigator";
 import ReduxThunk from "redux-thunk";
 import * as Font from "expo-font";
@@ -16,6 +17,7 @@ const rootReducer = combineReducers({
   products: productReducer,
   cart: cartReducer,
   orders: orderReducer,
+  auth: authReducer,
 });
 
 // const store = createStore(rootReducer, composeWithDevTools());

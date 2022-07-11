@@ -20,15 +20,22 @@ const OrderScreen = (props) => {
 
   useEffect(() => {
     setIsLoading(true);
-    dispatch(ordersActions.fetchOrders()).then(() => {
-      setIsLoading(false);
-    });
+    dispatch(ordersActions.fetchOrders()).then(() => {});
+    setIsLoading(false);
   }, [dispatch]);
 
   if (isLoading) {
     return (
       <View style={styles.centered}>
         <ActivityIndicator size={"large"} color={Colors.primary} />
+      </View>
+    );
+  }
+
+  if (orders.length === 0) {
+    return (
+      <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
+        <Text>You have not ordered anything yet..</Text>
       </View>
     );
   }

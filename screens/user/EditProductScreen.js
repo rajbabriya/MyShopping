@@ -115,6 +115,7 @@ const EditProductScreen = (props) => {
       props.navigation.goBack();
     } catch (err) {
       setError(err.message);
+      setIsLoading(false);
     }
   }, [dispatch, prodId, formState]);
   //   if (editedProduct) {
